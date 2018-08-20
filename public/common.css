@@ -1,0 +1,42 @@
+html{
+  height: 100%;width:100px;
+  overflow-y: hidden !important;
+}
+body{height: 100%;width:100px;}
+.tc{
+  text-align: center;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus{
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+.block{
+  display: block;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.box-b{
+  box-sizing: border-box;
+}
+.fz18{
+  font-size: 18px;
+}
+.fz16{
+  font-size: 16px;
+}
+.l-spac{
+  letter-spacing: 3px;
+}
+.pos-abs{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.cursor{
+  cursor: pointer;
+}
