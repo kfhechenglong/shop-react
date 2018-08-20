@@ -1,8 +1,8 @@
 html{
-  height: 100%;width:100px;
+  height: 100%;width:100%;
   overflow-y: hidden !important;
 }
-body{height: 100%;width:100px;}
+body{height: 100%;width:100%;}
 .tc{
   text-align: center;
 }
@@ -13,21 +13,6 @@ body{height: 100%;width:100px;}
 .block{
   display: block;
 }
-.fl{
-  float: left;
-}
-.fr{
-  float: right;
-}
-.box-b{
-  box-sizing: border-box;
-}
-.fz18{
-  font-size: 18px;
-}
-.fz16{
-  font-size: 16px;
-}
 .l-spac{
   letter-spacing: 3px;
 }
@@ -37,6 +22,207 @@ body{height: 100%;width:100px;}
   top:50%;
   transform: translate(-50%,-50%);
 }
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+table{
+  // text-align:center;
+  border-collapse: collapse;
+}
+
+img {
+  vertical-align: middle;
+}
 .cursor{
   cursor: pointer;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+/* 可修复IE6中双倍边距bug */
+.fr {
+  float: right;
+  display: inline;
+}
+.fz16{font-size: 16px;}
+.fz18{font-size: 18px;}
+.fz20{font-size: 20px;}
+.fz22{font-size: 22px;}
+.fz24{font-size: 24px;}
+.fz26{font-size: 26px;}
+.fz12i{font-size: 12px !important;}
+.fz14i{font-size: 14px !important;}
+.fz16i{font-size: 16px !important;}
+.fz18i{font-size: 18px !important;}
+.fz20i{font-size: 20px !important;}
+.fz22i{font-size: 22px !important;}
+.fz24i{font-size: 24px !important;}
+.fz26i{font-size: 26px !important;}
+.t-overflow{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.t-overflow-x{
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.t-overflow-break{
+  word-wrap: break-word; 
+  word-break: normal; 
+}
+
+.d-inline{display:inline-block}
+.d-block{display:block}
+.d-none{display:none}
+.box-b{
+  box-sizing:border-box;
+}
+.cursor{
+  cursor:pointer;
+}
+.t-c{text-align:center;}
+.l-s-1em{
+  letter-spacing: 1em;
+}
+.l-s-3px{letter-spacing: 3px;}
+.m-10{margin:10px}
+.m-20{margin:20px}
+.m-l-20{margin-left:20px;}
+.m-t-20{margin-top:20px;}
+.height-50{
+  height:50px;
+  line-height: 50px;
+}
+.height-30{
+  height:30px;
+  line-height: 30px;
+}
+.hw-100{
+  height:100%;
+  width: 100%;
+}
+.w-100{
+  width: 100%;
+}
+.h-100{
+  height:100%;
+}
+.post-fixed{
+  position: fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background: rgba(0,0,0,0.3);
+  z-index:3000;
+}
+.post-abs{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.bg-f{
+  background-color: #fff;
+}
+.post-abs-b{
+  position: absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background: #fff;
+  z-index:3000;
+}
+
+.rgba3{
+  background:rgba(0,0,0,0.3);
+}
+.height-90{height:90px !important;}
+.height-40{height:40px;line-height: 40px;}
+.height-20{ height:20px;line-height: 20px;}
+.height-35{height:35px;line-height: 35px;}
+.height-30{height:30px;line-height: 30px;}
+.height-60{height:60px;line-height: 60px;}
+.height-100{height:100px;line-height:100px;}
+.h100{height:100px;}
+.w100{width:100px;}
+.b-radius5{border-radius:5px;}
+.b-show5{box-shadow: 2px 2px 11px #ccc;}
+.b-show10-c{box-shadow: 0px 0px 10px #ccc;}
+.b-show10{box-shadow: 0px 0px 10px #000;}
+.b-show12{box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);}
+.tipsred{
+        text-align:right;
+        color:red;
+        margin:5px 0;
+    }
+.pointer {
+  cursor: pointer;
+}
+
+.font-color-red{color: red;}/*红色字体*/
+.font-color-blue{color: blue;}/*蓝色字体*/
+
+/*背景色*/
+.gray-bg {
+	background-color:#f3f3f4
+}
+
+
+.white-bg {
+	background-color:#fff
+}
+.navy-bg {
+	background-color:#1ab394;
+	color:#fff
+}
+.blue-bg {
+	background-color:#1c84c6;
+	color:#fff
+}
+.lazur-bg {
+	background-color:#23c6c8;
+	color:#fff
+}
+.yellow-bg {
+	background-color:#f8ac59;
+	color:#fff
+}
+.red-bg {
+	background-color:#ed5565;
+	color:#fff
+}
+.black-bg {
+	background-color:#262626
+}
+.color-blue{
+    color:blue;
+}
+.color-red{
+    color:red;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
 }
