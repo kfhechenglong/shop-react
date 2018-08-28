@@ -1,1 +1,3 @@
-1111
+git branch 分支名
+git checkout 分支名   //进入分支
+git branch   /
