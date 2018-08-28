@@ -1,3 +1,4 @@
 git branch 分支名
 git checkout 分支名   //进入分支
-git branch   /adasds
+git branch   /adasds的
+这是主分支增加的内容
