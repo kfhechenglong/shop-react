@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {Card} from 'antd'
-import './login.less';
-import 'antd/dist/antd.less';
-class Login extends Component {
+import {Layout} from 'antd'
+import './header.less';
+class Header extends Component {
   render() {
     return (
         <div className="login">
@@ -25,5 +24,4 @@ class Login extends Component {
     );
   }
 };
-const App = <Login/>
-export default App;
+export default Header;
