@@ -2,4 +2,8 @@ git branch 分支名
 git checkout 分支名   //进入分支
 git branch   /adasds的
 这是主分支增加的内容
+<<<<<<< HEAD
 这是主分支又增加的内容
+=======
+这是分支新增的内容1111
+>>>>>>> fen

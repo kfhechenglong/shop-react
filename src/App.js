@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu} from 'antd';
 import { Route, Switch, HashRouter,Link} from 'react-router-dom';
 import api from './commonjs/axios/api.js'
-
+import EleCopany from './company/companyLook.js'
 const { Header, Sider, Content } = Layout;
 const Home = function () {
 	return (
@@ -45,31 +45,31 @@ class App extends Component {
 								theme="dark"
 							>
 								<Menu.Item key="1">
-									<Link to='/company'>
+									<Link to='/company' replace>
 										<i className="iconfont icon-gongsi" ></i>&nbsp;&nbsp;
 										<span>公司信息</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="2">
-									<Link to='/emp'>
+									<Link to='/emp' replace>
 										<i className="iconfont icon-yuangongguanli1" ></i>&nbsp;&nbsp;
 										<span>员工管理</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="3">
-									<Link to='/store'>
+									<Link to='/store' replace>
 										<i className="iconfont icon-mendian" ></i>&nbsp;&nbsp;
 										<span>门店信息</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="4">
-									<Link to='/cumtomer'>
+									<Link to='/cumtomer' replace>
 										<i className="iconfont icon-kehu" ></i>&nbsp;&nbsp;
 										<span>顾客管理</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="5">
-									<Link to='/order'>
+									<Link to='/order' replace>
 										<i className="iconfont icon-pailie" ></i>&nbsp;&nbsp;
 										<span>排班管理</span>
 									</Link>
@@ -85,7 +85,7 @@ class App extends Component {
 							<div>
 								<HashRouter>
 									<Switch>
-										<Route exact path='/company' component={Home} />
+										<Route exact path='/company' component={EleCopany} />
 										<Route path='/emp' component={Shehui} />
 										<Route path='/store' component={Guonei} />
 										<Route path='/cumtomer' component={Guonei} />
