@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
-import {Layout} from 'antd'
+import { Avatar, Dropdown, Menu, Icon} from 'antd'
 import './header.less';
-class Header extends Component {
+class MyHeader extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            
+        };
+    }
   render() {
+      const menu = (
+          <Menu>
+                <Menu.Item key="0">
+                  <a href="javascript:;">设&nbsp;&nbsp;&nbsp;&nbsp;置</a>
+                </Menu.Item>
+                <Menu.Item key="1">
+                    <a href="javascript:;">修改密码</a>
+                </Menu.Item>
+                <Menu.Item key="2">
+                    <a href="javascript:;">退&nbsp;&nbsp;&nbsp;&nbsp;出</a>
+                </Menu.Item>
+          </Menu>
+      );
     return (
-        <div className="login">
-            <div className="warp">
-				<Card>
-                    <header className="login-l tc">
-                        <h3 className="App-title fz22">欢迎使用后台管理系统</h3>
-                        <p><span>说明：</span> 请使用微信扫一扫登录</p>
-                    </header>
-                    <div className="App-intro">
-                        <div className="t-c">
-                            <div className="code-qq">
-                                <iframe title="iframe" id="wxcode" name="wxcode" src="https://nx.smsc.net.cn/wxopen/app/shop/wxweblogin.php" frameBorder="0" scrolling="no" width="400px" height="400px;"></iframe>
-                            </div>
-                        </div>
-                    </div>
-				</Card>
-            </div>
+        <div className="user-info fr">
+            <Avatar alt="用户头像" src={this.props.user.headimg} size={50} iocn="user"/>
+            <Dropdown overlay={menu} trigger={['click']}>
+                <a className="ant-dropdown-link" href="#">{this.props.user.nickname}<Icon type="down"/></a> 
+            </Dropdown>
         </div>
     );
   }
 };
-export default Header;
+export default MyHeader;

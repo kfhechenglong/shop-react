@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu} from 'antd';
 import { Route, Switch, HashRouter,Link} from 'react-router-dom';
 import api from './commonjs/axios/api.js'
+import MyHeader from './header/header.js'
 import EleCopany from './company/companyLook.js'
 const { Header, Sider, Content } = Layout;
 const Home = function () {
@@ -22,12 +23,21 @@ const Guonei = function () {
 };
 
 class App extends Component {
-	componentDidMount() {
-		this.test()
+	constructor() {
+		super();
+		this.state = {
+			userInfo: {}
+		};
 	}
-	async test(){
+	componentDidMount() {
+		this.getUsrInfo()
+	}
+	async getUsrInfo(){
 		await api.ajax('getCompanyInfo').then((res) => {
 			console.log(res);
+			if(res.code === 200){
+				this.setState({ userInfo: res.data });
+			}
 		});
 	}
 	render() {
@@ -77,11 +87,11 @@ class App extends Component {
 							</Menu>
 						</HashRouter>
 					</Sider>
-					<Layout>
-						<Header>
-							
+					<Layout className="lay-self">
+						<Header className="box-b" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+							<MyHeader user={this.state.userInfo}></MyHeader>
 						</Header>
-						<Content>
+						<Content style={{ padding: '0 20px', marginTop: 70 }}>
 							<div>
 								<HashRouter>
 									<Switch>
