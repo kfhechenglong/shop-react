@@ -4,8 +4,15 @@ import {Card,Button} from 'antd'
 import './comp.less';
 import 'antd/dist/antd.less';
 class Company extends React.Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			
+		}
+	}
     editCompanyInfo = () => {
-        console.log('编辑公司信息！');
+		console.log('编辑公司信息！');
+		console.log(this.props);
     }
   render() {
     return (

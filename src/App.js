@@ -95,7 +95,7 @@ class App extends Component {
 							<div>
 								<HashRouter>
 									<Switch>
-										<Route exact path='/company' component={EleCopany} />
+										<Route exact path='/company' companyInfo={this.state.userInfo} component={EleCopany} />
 										<Route path='/emp' component={Shehui} />
 										<Route path='/store' component={Guonei} />
 										<Route path='/cumtomer' component={Guonei} />
