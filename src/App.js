@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 import { Layout, Menu} from 'antd';
-import { Route, Switch, HashRouter,Link} from 'react-router-dom';
+import { Route, Switch, HashRouter,Link, Router} from 'react-router-dom';
 import api from './commonjs/axios/api.js'
 import MyHeader from './header/header.js'
+import {PrivateRoute} from './router'
 import EleCopany from './company/companyLook.js'
+import Login from './login/applogin.js'
 const { Header, Sider, Content } = Layout;
-const Home = function () {
-	return (
-		<div>Home</div>
-	);
-};
 const Shehui = function () {
 	return (
 		<div>社会</div>
 	);
 };
 
-const Guonei = function () {
-	return (
-		<div>国内</div>
-	);
-};
-
+console.log(PrivateRoute);
 class App extends Component {
 	constructor() {
 		super();
@@ -96,13 +88,14 @@ class App extends Component {
 								<HashRouter>
 									<Switch>
 										<Route exact path='/company' companyInfo={this.state.userInfo} component={EleCopany} />
-										<Route path='/emp' component={Shehui} />
-										<Route path='/store' component={Guonei} />
-										<Route path='/cumtomer' component={Guonei} />
-										<Route path='/order' component={Guonei} />
+										<PrivateRoute path='/emp' component={Shehui} />
+										<Route path='/store' component={EleCopany} />
+										<Route path='/cumtomer' component={EleCopany} />
+										<Route path='/order' component={EleCopany} />
+										<Route path="/login" component={Login} />
 									</Switch>
 								</HashRouter>
-								</div>
+							</div>
 						</Content>
 					</Layout>
 				</Layout>
