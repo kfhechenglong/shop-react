@@ -12,9 +12,7 @@ const Shehui = function () {
 		<div>社会</div>
 	);
 };
-
-console.log(PrivateRoute);
-class App extends Component {
+class Index extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -24,17 +22,17 @@ class App extends Component {
 	componentDidMount() {
 		this.getUsrInfo()
 	}
-	async getUsrInfo(){
+	async getUsrInfo() {
 		await api.ajax('getCompanyInfo').then((res) => {
 			console.log(res);
-			if(res.code === 200){
+			if (res.code === 200) {
 				this.setState({ userInfo: res.data });
 			}
 		});
 	}
-	render() {
+	render(){
 		return (
-			<div className="home-main w-100 h-100">
+			<div className="w-100 h-100">
 				<Layout className="w-100 h-100">
 					<Sider>
 						<h1 className="h1 t-c">
@@ -47,33 +45,33 @@ class App extends Component {
 								theme="dark"
 							>
 								<Menu.Item key="1">
-									<Link to='/company' replace>
+									<Link to='/index' replace>
 										<i className="iconfont icon-gongsi" ></i>&nbsp;&nbsp;
-										<span>公司信息</span>
+											<span>公司信息</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="2">
-									<Link to='/emp' replace>
+									<Link to='/index/emp' replace>
 										<i className="iconfont icon-yuangongguanli1" ></i>&nbsp;&nbsp;
-										<span>员工管理</span>
+											<span>员工管理</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="3">
-									<Link to='/store' replace>
+									<Link to='/index/store' replace>
 										<i className="iconfont icon-mendian" ></i>&nbsp;&nbsp;
-										<span>门店信息</span>
+											<span>门店信息</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="4">
-									<Link to='/cumtomer' replace>
+									<Link to='/index/cumtomer' replace>
 										<i className="iconfont icon-kehu" ></i>&nbsp;&nbsp;
-										<span>顾客管理</span>
+											<span>顾客管理</span>
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="5">
-									<Link to='/order' replace>
+									<Link to='/index/order' replace>
 										<i className="iconfont icon-pailie" ></i>&nbsp;&nbsp;
-										<span>排班管理</span>
+											<span>排班管理</span>
 									</Link>
 								</Menu.Item>
 							</Menu>
@@ -87,18 +85,39 @@ class App extends Component {
 							<div>
 								<HashRouter>
 									<Switch>
-										<Route exact path='/company' companyInfo={this.state.userInfo} component={EleCopany} />
-										<PrivateRoute path='/emp' component={Shehui} />
-										<Route path='/store' component={EleCopany} />
-										<Route path='/cumtomer' component={EleCopany} />
-										<Route path='/order' component={EleCopany} />
-										<Route path="/login" component={Login} />
+										<Route exact path='/index' companyInfo={this.state.userInfo} component={EleCopany} />
+										<PrivateRoute path='/index/emp' component={Shehui} />
+										<Route path='/index/store' component={Shehui} />
+										<Route path='/index/cumtomer' component={Shehui} />
+										<Route path='/index/order' component={EleCopany} />
 									</Switch>
 								</HashRouter>
 							</div>
 						</Content>
 					</Layout>
 				</Layout>
+			</div>
+		)
+	};
+};
+
+class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			userInfo: {}
+		};
+	}
+	
+	render() {
+		return (
+			<div className="home-main w-100 h-100">
+				<HashRouter>
+					<Switch>
+						<Route path="/index" component={Index} />
+						<Route path="/login" component={Login} />
+					</Switch>
+				</HashRouter>
 			</div>
 		);
 	}

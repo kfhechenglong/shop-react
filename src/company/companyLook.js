@@ -37,24 +37,6 @@ class Company extends React.Component {
 							
 						</div>
 					</li>
-					<li className="">
-						<h4>公司Logo:</h4>
-						<div className="list-item">
-							
-						</div>
-					</li>
-					<li className="">
-						<h4>预约小程序:</h4>
-						<div className="list-item">
-							
-						</div>
-					</li>
-					<li className="">
-						<h4>服务号:</h4>
-						<div className="list-item">
-							
-						</div>
-					</li>
 				</ul>
 			</Card>
         </div>
