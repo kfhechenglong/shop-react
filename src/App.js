@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Menu} from 'antd';
-import { Route, Switch, HashRouter,Link, Router} from 'react-router-dom';
+import { Route, Switch, HashRouter, Link, Router} from 'react-router-dom';
 import api from './commonjs/axios/api.js'
 import MyHeader from './header/header.js'
 import {PrivateRoute} from './router'
@@ -114,8 +114,9 @@ class App extends Component {
 			<div className="home-main w-100 h-100">
 				<HashRouter>
 					<Switch>
-						<Route path="/index" component={Index} />
+						<Route path="/index"  component={Index} />
 						<Route path="/login" component={Login} />
+						
 					</Switch>
 				</HashRouter>
 			</div>

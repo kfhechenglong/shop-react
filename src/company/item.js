@@ -10,21 +10,21 @@ class CompanyItem extends React.Component {
 			content_w:20
 		}
 	}
-  render() {
-    return (
-        <div className="comp-item">
-			<Row>	
-				<Col span={this.state.span_w}>
-					<span>{this.props.contentName}</span>
-				</Col>
-				<Col span={this.state.content_w}>
-					<div className="list-item">
-						{this.props.contentValue}
-					</div>
-				</Col>
-			</Row>
-        </div>
-    );
-  }
+	render() {
+		return (
+			<div className="comp-item">
+				<Row>	
+					<Col span={this.state.span_w}>
+						<span>{this.props.contentName}</span>
+					</Col>
+					<Col span={this.state.content_w}>
+						<div className="list-item">
+							{this.props.contentValue}
+						</div>
+					</Col>
+				</Row>
+			</div>
+        );
+	}
 };
 export default CompanyItem;
