@@ -185,7 +185,7 @@ const sendAjax = (o_params) => {
     if (process.env.NODE_ENV === 'development') {
         base = '/api';
         console.log(process.env.NODE_ENV);
-        document.cookie = "PHPSESSID=" + 're8t5ss3v375qeurlt95cgnob5'; 
+        document.cookie = "PHPSESSID=" + 'at9ortcekmaj11limo5pj61780'; 
     }
     return axios.post(`${base}/admin.php/`, qs.stringify(params), ax_config).then((res) => {
         console.log(res.data);

@@ -24,7 +24,6 @@ class Index extends Component {
 	}
 	async getUsrInfo() {
 		await api.ajax('getCompanyInfo').then((res) => {
-			console.log(res);
 			if (res.code === 200) {
 				this.setState({ userInfo: res.data });
 			}
@@ -85,7 +84,8 @@ class Index extends Component {
 							<div>
 								<HashRouter>
 									<Switch>
-										<Route exact path='/index' companyInfo={this.state.userInfo} component={EleCopany} />
+										<Route exact path='/index' render={props => {
+											return <EleCopany {...this.state} />}} />
 										<PrivateRoute path='/index/emp' component={Shehui} />
 										<Route path='/index/store' component={Shehui} />
 										<Route path='/index/cumtomer' component={Shehui} />

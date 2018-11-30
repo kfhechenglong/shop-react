@@ -19,7 +19,7 @@ export class PrivateRoute extends Component{
         console.log("this.props:", this.props)
         return (
             <Route {...rest} render={props => {
-                return false ? <Component {...this.props} /> : <Redirect to="/login" /> //这里的<Component {...this.props} />实际上指向的是Layout组件
+                return true ? <Component {...this.props} /> : <Redirect to="/login" /> //这里的<Component {...this.props} />实际上指向的是Layout组件
             }} />
         )
     }

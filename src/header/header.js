@@ -11,12 +11,6 @@ class MyHeader extends Component {
   render() {
       const menu = (
           <Menu>
-                <Menu.Item key="0">
-                  <a href="javascript:;">设&nbsp;&nbsp;&nbsp;&nbsp;置</a>
-                </Menu.Item>
-                <Menu.Item key="1">
-                    <a href="javascript:;">修改密码</a>
-                </Menu.Item>
                 <Menu.Item key="2">
                     <a href="javascript:;">退&nbsp;&nbsp;&nbsp;&nbsp;出</a>
                 </Menu.Item>
